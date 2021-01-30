@@ -30,7 +30,8 @@ build() {
 		--sysconfdir=/etc \
 		--sbindir=/usr/bin \
 		--disable-bluez4 \
-		--enable-tools
+		--enable-tools \
+		--host=aarch64-linux-gnu
 	make CFLAGS=-DHAVE_RAWMEMCHR
 }
 
