@@ -1,7 +1,7 @@
 _pkgname="ofono"
 pkgname="$_pkgname-git"
 pkgver=r8870.59d47a28
-pkgrel=2
+pkgrel=3
 pkgdesc="Infrastructure for building mobile telephony (GSM/UMTS) applications"
 url="https://01.org/ofono"
 arch=("x86_64" "aarch64")
@@ -10,7 +10,7 @@ depends=("bluez" "dbus" "modemmanager" "glib2" "udev" "mobile-broadband-provider
 provides=("$_pkgname")
 source=(
 	"git+https://github.com/msm8953-mainline/ofono.git"
-	"git+https://git.kernel.org/pub/scm/libs/ell/ell.git"
+	"git+https://git.kernel.org/pub/scm/libs/ell/ell.git#tag=0.38"
 )
 sha256sums=(
 	"SKIP"
