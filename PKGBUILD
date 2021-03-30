@@ -1,7 +1,7 @@
 _pkgname="ofono"
 pkgname="$_pkgname-git"
 pkgver=r8870.59d47a28
-pkgrel=1
+pkgrel=2
 pkgdesc="Infrastructure for building mobile telephony (GSM/UMTS) applications"
 url="https://01.org/ofono"
 arch=("x86_64" "aarch64")
