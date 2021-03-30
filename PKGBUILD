@@ -1,7 +1,7 @@
 _pkgname="ofono"
 pkgname="$_pkgname-git"
-pkgver=r8819.04593320
-pkgrel=2
+pkgver=r8870.59d47a28
+pkgrel=1
 pkgdesc="Infrastructure for building mobile telephony (GSM/UMTS) applications"
 url="https://01.org/ofono"
 arch=("x86_64" "aarch64")
@@ -41,5 +41,7 @@ package() {
 	install -Dm644 "$srcdir/$_pkgname/src/ofono.conf" "$pkgdir/etc/dbus-1/system.d/ofono.conf"
 	install -Dm644 "$srcdir/$_pkgname/src/ofono.service" "$pkgdir/usr/lib/systemd/system/ofono.service"
 	install -Dm755 "$srcdir/$_pkgname/tools/auto-enable" "$pkgdir/usr/bin/ofono-auto-enable"
+	mkdir -p "$pkgdir/usr/lib/ofono/test"
+	install -Dm755 "$srcdir/$_pkgname/test/"* "$pkgdir/usr/lib/ofono/test"
 	install -Dm644 "$srcdir/$_pkgname/plugins/ofono.rules" "$pkgdir/usr/lib/udev/rules.d/97-ofono.rules"
 }
